@@ -4,7 +4,7 @@ mark(){
 		local lines="$(wc -l < ~/.markRecal/mark.list)"
 		if [ $1 -gt $lines ]
 		then
-			for I in $1 .. $lines 
+			for I in { seq $1 $lines} 
 			do 
 				echo . >>~/.markRecal/mark.list
 			done
