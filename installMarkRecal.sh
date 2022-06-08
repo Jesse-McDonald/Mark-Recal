@@ -17,7 +17,7 @@ mark(){
 recal(){
 	if ! [ -z "$1" ]
 	then
-		cd $(sed "$1!d" ~/.markRecal/mark.list) 
+		cd "$(sed "$1!d" ~/.markRecal/mark.list)" 
 	else
 		cd "$(cat ~/.markRecal/mark)"
 	fi
@@ -25,13 +25,13 @@ recal(){
 swap(){
 	if ! [ -z "$1" ]
 	then
-		local going=$(sed "$1!d" ~/.markRecal/mark.list) 
+		local going=$(sed "$1!d" ~/.markRecal/mark.list)
 		mark $1
-		cd $going
+		cd "$going"
 	else
-		local going="$(cat ~/.markRecal/mark)"
+		local going=$(cat ~/.markRecal/mark)
 		echo $PWD > ~/.markRecal/mark
-		cd $going
+		cd "$going"
 	fi
 }
 if ! [ -d ~/.markRecal ] 
