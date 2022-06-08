@@ -16,3 +16,7 @@ Usage: `swap [index]`
 Recals to the target directory at the same time as marking the current directory.  Usefull for when you have 2 directories you are frequently switching between
 Similar to mark and recal, if no arg is given `~/markRecal/mark` is used, or if an arg is used, a specific line of `~/markRecal/mark.list` is swapped instead.
 
+## Install
+download installMarkRecal.sh and put it anywhere and make it executable (`chmod +x installMarkRecal.sh`), then add
+
+`source pathto/installMarkRecal.sh` in `./bashrc` or your prefered configuration
